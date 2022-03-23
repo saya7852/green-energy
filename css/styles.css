@@ -90,6 +90,7 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    border-bottom: 10px solid #872E16;
 }
 
 /* bleed & blur background image */

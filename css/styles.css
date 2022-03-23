@@ -1,0 +1,360 @@
+/* This is the stylesheet for Green Energy - 
+Content Manipulation Assignment
+MTM1526 by Masayo Williams
+*/
+
+/* ////// GENERAL SCHEMES 
+
+****** FONTS ******
+Headings: Bree Serif & Serif
+Body: IBM Plex Sans Condensed & Sans-serif
+
+font-family: 'Bree Serif', serif;
+font-family: 'IBM Plex Sans Condensed', sans-serif;
+
+Line height: 1.4-1.6
+Font sizes: Mobile = 0.75rem
+            Tablet/Desktop = 1rem
+
+****** COLOURS ******
+Analogous - include HEX values
+HTML Background colour
+
+Primary - forest: #3D7019
+Secondary - loam: #59554A
+
+Accent - cloud: #648782
+Accent - brick: #872E16
+
+Basic Charcoal: #1F1F1F
+Whitecloud: #F2F2F2
+
+
+****** LAYOUT ******
+
+- Mobile View (<30rem):
+Gutter around the content 2rem
+Left-align everything
+
+- Tablet/Desktoop View (<60rem):
+Float Navbar items & align horizontally
+Main content image at 25% & floating
+Text wraps around image
+
+*/
+
+
+/* ////// GENERAL STYLES */
+
+* {
+    box-sizing: border-box;
+}
+
+/* max width 60rem, center page on screen */
+html {
+    max-width: 60rem;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+body {
+    max-width: 60rem;
+    background-color: #59554A;
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    margin: 0;
+}
+
+
+/* HEADINGS */
+h1 {
+    font-size: 2rem;
+    font-family: 'Bree Serif', serif;
+    padding: 2rem 2rem 0 2rem;
+    line-height: 1.4;
+    margin-block-end: 1rem;
+}
+
+h4 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: -2rem;
+    margin-bottom: 0;
+    text-shadow: 5px 2px 2px  #59554A;
+    z-index: 999;
+}
+
+/* HEADER STYLES */
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* bleed & blur background image */
+img.bg-img {
+    height: 10rem;
+    width: 100%;
+    filter: blur(3px)
+}
+
+img.logo {
+    padding: 2rem;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+/* NAVBAR STYLES */
+nav {
+    display: inline;
+}
+
+ul.navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    opacity: 0.7;
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+#top-nav {
+    align-items: left;
+}
+
+li.nav-item {
+    list-style-type: none;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px dotted #59554A;
+}
+
+a.nav-link {
+    text-align: left;
+    text-decoration: none;
+    color: #872E16;
+}
+
+/* highlight current location */
+a.nav-link#current {
+    color: #648782;
+}
+
+
+article {
+    background-color: #f1f1f1;
+    padding-bottom: 2rem;
+}
+
+p {
+    margin: 2rem;
+}
+
+button {
+    border: none;
+    background-color: #59554A;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    color: #ffffff;
+}
+
+div.controls>ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    margin: 2rem;
+}
+
+li.btn {
+    list-style-type: none;
+}
+
+.icon-button {
+    pointer-events: none;
+}
+
+button, .icon-button {
+    cursor: pointer;
+}
+
+figure {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+/* highlight active button */
+#active {
+    background-color: #648782;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #ffffff;
+}
+
+footer {
+    padding: 2rem;
+    padding-bottom: 3rem;
+    background-color: #3D7019;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+a.icon {
+    margin: 2rem;
+    color: #ffffff;
+}
+
+p.footer-text {
+    color: #f1f1f1;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+
+/* MEDIA QUERIES 
+
+Mobile first styles will be overridden by below:
+For screens wider than 25rem */
+@media only screen and (min-width: 30rem) {
+    .header {
+        position: relative;
+        flex-direction: row;
+    }
+    
+    img.bg-img {
+        height: 14rem;
+    }
+    img.logo {
+        max-width: 80%;
+        margin: 2rem;
+        margin-left: 1rem;
+        position: absolute;
+        top: 0;
+    }
+
+    h4 {
+        position: absolute;
+        top: 11rem;
+        z-index: 999;
+        left: 1rem;
+        text-align: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        font-size: 0.8rem;
+    }
+
+
+    nav {
+        position: absolute;
+        top: 8rem;
+    }
+
+    ul.navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        background-color: transparent;
+        opacity: 1;
+        margin-bottom: 0;
+    }
+
+    li.nav-item {
+        background-color: #f1f1f1;
+        margin: 0.2rem;
+        width: 6.2rem;
+        height: 2rem;
+        text-align: center;
+        padding-top: 0.2rem; 
+        font-size: 1rem;
+    }
+
+    article {
+        margin: 2rem;
+        padding: 2rem 1rem;
+        padding-top: 1rem;
+        box-shadow: 3px 2px 4px 2px #7c7b78 inset;
+    }
+
+    h1 {
+        padding: 1rem 2rem;
+    }
+
+    figure>img {
+        float: left;
+        padding: 1.8rem;
+        width: 300px;        
+    }
+
+    div.controls>ul {
+        
+        align-items: left;
+        justify-content: flex-start;
+    }
+
+    li.btn {
+        margin: 1rem;
+    }
+
+    /* change social icon alignment */
+    .social {
+        justify-content: left;
+    }
+
+    p.footer-text {
+        text-align: left;
+    }
+
+    a.icon>i {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 37rem) {
+ 
+    img.bg-img {
+        height: 18rem;
+    }
+    
+    img.logo {
+        
+        top: 0;
+    }
+    
+    h4 {
+        
+        top: 14rem;
+        z-index: 999;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        font-size: 1rem;
+    }
+
+    nav {
+        position: absolute;
+        top: 12rem;
+        
+    }
+
+    li.nav-item {
+        width: 8rem;
+    }
+
+    /* change footer layout */
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    p.footer-text {
+        text-align: right;
+    }
+}

@@ -228,6 +228,10 @@ p.footer-text {
 Mobile first styles will be overridden by below:
 For screens wider than 25rem */
 @media only screen and (min-width: 30rem) {
+    body {
+        font-size: 1rem;
+    }
+            
     .header {
         position: relative;
         flex-direction: row;

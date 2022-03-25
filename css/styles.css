@@ -298,10 +298,12 @@ For screens wider than 25rem */
         padding: 2rem 1rem;
         padding-top: 1rem;
         box-shadow: 3px 2px 4px 2px #7c7b78 inset;
+        margin-top: 0;
     }
 
     h1 {
         padding: 1rem 2rem;
+        padding-bottom: 0;
     }
 
     figure>img {

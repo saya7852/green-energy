@@ -119,6 +119,8 @@ ul.navbar {
     background-color: #f1f1f1;
     opacity: 0.7;
     padding: 2rem 2rem 1rem 2rem;
+    border-top: 10px solid #872E16;
+
 }
 
 #top-nav {
@@ -150,6 +152,7 @@ article {
 
 p {
     margin: 2rem;
+            margin-top: 1rem;
 }
 
 button {
@@ -170,6 +173,8 @@ div.controls>ul {
     margin-block-end: 0;
     padding-inline-start: 0;
     margin: 2rem;
+    margin-bottom: 0;
+
 }
 
 li.btn {
@@ -225,6 +230,10 @@ p.footer-text {
 Mobile first styles will be overridden by below:
 For screens wider than 25rem */
 @media only screen and (min-width: 30rem) {
+    body {
+        font-size: 1rem;
+    }
+    
     .header {
         position: relative;
         flex-direction: row;
@@ -265,6 +274,8 @@ For screens wider than 25rem */
         background-color: transparent;
         opacity: 1;
         margin-bottom: 0;
+        border-top: none;
+
     }
 
     li.nav-item {
@@ -276,7 +287,11 @@ For screens wider than 25rem */
         padding-top: 0.2rem; 
         font-size: 1rem;
     }
-
+            
+    main {
+        border-top: 10px solid #872E16;
+    }
+    
     article {
         margin: 2rem;
         padding: 2rem 1rem;

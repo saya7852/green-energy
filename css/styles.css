@@ -309,7 +309,8 @@ For screens wider than 25rem */
     figure>img {
         float: left;
         padding: 1.8rem;
-        width: 300px;        
+        width: 300px;
+        padding-top: 0;
     }
 
     div.controls>ul {
